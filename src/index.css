@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Rancho&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #Eb0029;
+  --color-secondary: #Fc791A;
+  --color-accent: #5c6574;
+}
+
+*{
+  font-family: "Epilogue", sans-serif;
+}
+body h1, h2, h3, h5, h6, button{
+  font-family: "Rancho", cursive;
+  letter-spacing: 1px;
+}
+body button{
+  cursor: pointer;
+}
+body{
+  overflow-x: hidden;
+}
