@@ -5,21 +5,21 @@ pipeline {
 
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/Varhneyprachi/Food-Saver.git'
+                git branch: 'main', url: 'https://github.com/Varhneyprachi/Food-Saver.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t mern-app .'
+                sh 'docker build -t food-saver .'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker stop mern-app || true'
-                sh 'docker rm mern-app || true'
-                sh 'docker run -d -p 3000:3000 --name mern-app mern-app'
+                sh 'docker stop food-saver || true'
+                sh 'docker rm food-saver || true'
+                sh 'docker run -d -p 3000:3000 --name food-saver food-saver'
             }
         }
     }
